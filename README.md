@@ -50,3 +50,22 @@ and `1`, allowing any remaining binary symbols.
 
 Examples accepted include `0`, `01`, `0011`, and `01010`. Examples rejected
 include the empty string, `1`, and `101`.
+
+### NFA to DFA conversion using subset construction
+
+**File:** [`NFA-to-DFA.jff`](NFA-to-DFA.jff)
+
+This experiment demonstrates the NFA used as the starting point for a
+conversion to a DFA over `{a, b}`. The NFA begins at `q0`, accepts in `q2`,
+and is nondeterministic because `q0` has two transitions on `a`.
+
+Using subset construction, the reachable DFA states are:
+
+- `{q0}` (initial)
+- `{q0, q1}`
+- `{q2}` (accepting)
+- `{q1, q2}` (accepting)
+- `{}` (dead state)
+
+Every subset containing `q2` is accepting. The empty subset is added to make
+the resulting DFA complete, with self-loops on both input symbols.
