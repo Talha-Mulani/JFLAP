@@ -69,3 +69,18 @@ Using subset construction, the reachable DFA states are:
 
 Every subset containing `q2` is accepting. The empty subset is added to make
 the resulting DFA complete, with self-loops on both input symbols.
+
+### Moore machine changing every occurrence of `100` to `101`
+
+**File:** [`Moore-Machine.jff`](Moore-Machine.jff)
+
+This Moore machine scans a binary input and changes each occurrence of
+`100` to `101`. Its states remember the relevant suffix of the input:
+
+- `q0`: no partial `100` pattern is being matched.
+- `q1`: the latest relevant symbol is `1`.
+- `q2`: the latest relevant suffix is `10`.
+- `q3`: `100` has been detected, and the output changes its final `0` to `1`.
+
+The machine uses output labels `0` and `1` to produce the transformed binary
+string while preserving all other input symbols.
