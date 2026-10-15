@@ -21,3 +21,20 @@ The automaton uses:
 
 Examples accepted include `ab`, `aab`, and `abb`. Examples rejected include
 `a`, `ba`, and `bba`.
+
+### DFA accepting strings containing the substring `bab`
+
+**File:** [`DFA-2.jff`](DFA-2.jff)
+
+This deterministic finite automaton accepts strings over `{a, b}` that
+contain `bab` as a substring. Its states track the longest suffix of the
+input that is also a prefix of `bab`:
+
+- `q0`: no part of `bab` has been matched.
+- `q1`: the latest symbol is `a`.
+- `q2`: the latest relevant suffix is `b`.
+- `q3`: the latest relevant suffix is `ba`.
+- `q4`: `bab` has been found; all remaining input is accepted.
+
+Examples accepted include `bab`, `abab`, and `babb`. Examples rejected include
+the empty string, `bba`, and `aaaa`.
