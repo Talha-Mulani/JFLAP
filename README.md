@@ -84,3 +84,12 @@ This Moore machine scans a binary input and changes each occurrence of
 
 The machine uses output labels `0` and `1` to produce the transformed binary
 string while preserving all other input symbols.
+
+### Epsilon-NFA for the regular expression `(01)*0*`
+
+**File:** [`epsilon-NFA-to-DFA.jff`](epsilon-NFA-to-DFA.jff)
+
+This epsilon-NFA uses ε-transitions to accept strings described by
+`(01)*0*`. It can accept the empty string, repeated `01` pairs, and any
+number of trailing zeros. Examples include `ε`, `0`, `01`, `010`, and
+`0100`.
