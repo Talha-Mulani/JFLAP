@@ -38,3 +38,15 @@ input that is also a prefix of `bab`:
 
 Examples accepted include `bab`, `abab`, and `babb`. Examples rejected include
 the empty string, `bba`, and `aaaa`.
+
+### NFA accepting strings that start with `0`
+
+**File:** [`NFA-1.jff`](NFA-1.jff)
+
+This nondeterministic finite automaton accepts binary strings whose first
+symbol is `0`. The transition from the initial state to the accepting state
+reads the required leading `0`; the accepting state then loops on both `0`
+and `1`, allowing any remaining binary symbols.
+
+Examples accepted include `0`, `01`, `0011`, and `01010`. Examples rejected
+include the empty string, `1`, and `101`.
