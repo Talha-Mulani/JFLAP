@@ -5,7 +5,7 @@ A self-learning repository for Theory of Computation (TCS), documenting automata
 
 ### DFA accepting strings that start with `a` and end with `b`
 
-**File:** [`DFA-1.jff`](DFA-1.jff)
+**File:** [`40_Talha_DFA_Starting_Ending_2026-10-15.jff`](40_Talha_DFA_Starting_Ending_2026-10-15.jff)
 
 This deterministic finite automaton accepts strings over the alphabet
 `{a, b}` whose first symbol is `a` and whose last symbol is `b`.
@@ -24,7 +24,7 @@ Examples accepted include `ab`, `aab`, and `abb`. Examples rejected include
 
 ### DFA accepting strings containing the substring `bab`
 
-**File:** [`DFA-2.jff`](DFA-2.jff)
+**File:** [`40_Talha_DFA_Contains_BAB_2026-10-15.jff`](40_Talha_DFA_Contains_BAB_2026-10-15.jff)
 
 This deterministic finite automaton accepts strings over `{a, b}` that
 contain `bab` as a substring. Its states track the longest suffix of the
@@ -41,7 +41,7 @@ the empty string, `bba`, and `aaaa`.
 
 ### NFA accepting strings that start with `0`
 
-**File:** [`NFA-1.jff`](NFA-1.jff)
+**File:** [`40_Talha_NFA_Starting_With_0_2026-10-15.jff`](40_Talha_NFA_Starting_With_0_2026-10-15.jff)
 
 This nondeterministic finite automaton accepts binary strings whose first
 symbol is `0`. The transition from the initial state to the accepting state
@@ -53,7 +53,7 @@ include the empty string, `1`, and `101`.
 
 ### NFA to DFA conversion using subset construction
 
-**File:** [`NFA-to-DFA.jff`](NFA-to-DFA.jff)
+**File:** [`40_Talha_NFA_to_DFA_Conversion_2026-10-15.jff`](40_Talha_NFA_to_DFA_Conversion_2026-10-15.jff)
 
 This experiment demonstrates the NFA used as the starting point for a
 conversion to a DFA over `{a, b}`. The NFA begins at `q0`, accepts in `q2`,
@@ -72,7 +72,7 @@ the resulting DFA complete, with self-loops on both input symbols.
 
 ### Moore machine changing every occurrence of `100` to `101`
 
-**File:** [`Moore-Machine.jff`](Moore-Machine.jff)
+**File:** [`40_Talha_Moore_Machine_2026-10-15.jff`](40_Talha_Moore_Machine_2026-10-15.jff)
 
 This Moore machine scans a binary input and changes each occurrence of
 `100` to `101`. Its states remember the relevant suffix of the input:
@@ -87,7 +87,7 @@ string while preserving all other input symbols.
 
 ### Epsilon-NFA for the regular expression `(01)*0*`
 
-**File:** [`epsilon-NFA-to-DFA.jff`](epsilon-NFA-to-DFA.jff)
+**File:** [`40_Talha_Epsilon_NFA_to_DFA_2026-10-15.jff`](40_Talha_Epsilon_NFA_to_DFA_2026-10-15.jff)
 
 This epsilon-NFA uses ε-transitions to accept strings described by
 `(01)*0*`. It can accept the empty string, repeated `01` pairs, and any
